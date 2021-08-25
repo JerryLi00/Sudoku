@@ -1,3 +1,4 @@
+#add button to remove val
 import pygame
 import random
 import copy
@@ -250,6 +251,7 @@ while run:
                 grid = copy.deepcopy(prev_grid)
 
     if want_to_solve  == True:
+        grid = copy.deepcopy(prev_grid) 
         if solve(grid, 0, 0) == False:
             unsolvable = True
         else:
